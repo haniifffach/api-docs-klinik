@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://127.0.0.1:8000/api-docs -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentasi API Klinik</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #d32f2f;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 5px;
+            display: block;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>📌 Dokumentasi API Klinik</h1>
+    <p>Base URL: <code>http://127.0.0.1:8000/api</code></p>
+    <p>Berikut adalah daftar endpoint API yang bisa digunakan oleh tim Frontend.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Endpoint</th>
+                <th>Deskripsi</th>
+                <th>Contoh Body (JSON)</th>
+                <th>Contoh Response</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GET</td>
+                <td>/patients</td>
+                <td>Ambil semua data pasien</td>
+                <td>-</td>
+                <td>
+<code>{
+    "id": 1,
+    "name": "Budi Santoso",
+    "phone_number": "08123456789",
+    "address": "Jl. Melati No. 5"
+}</code>
+                </td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/patients</td>
+                <td>Tambah data pasien baru</td>
+                <td>
+<code>{
+    "name": "Budi Santoso",
+    "phone_number": "08123456789",
+    "address": "Jl. Melati No. 5"
+}</code>
+                </td>
+                <td>
+<code>{
+    "message": "Pasien berhasil ditambahkan",
+    "data": {
+        "id": 1,
+        "name": "Budi Santoso",
+        "phone_number": "08123456789",
+        "address": "Jl. Melati No. 5"
+    }
+}</code>
+                </td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td>/patients/{id}</td>
+                <td>Update data pasien</td>
+                <td>
+<code>{
+    "name": "Update Nama",
+    "phone_number": "08123456789",
+    "address": "Alamat Baru"
+}</code>
+                </td>
+                <td>
+<code>{
+    "message": "Data pasien berhasil diperbarui",
+    "data": {
+        "id": 1,
+        "name": "Update Nama",
+        "phone_number": "08123456789",
+        "address": "Alamat Baru"
+    }
+}</code>
+                </td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>/patients/{id}</td>
+                <td>Hapus data pasien</td>
+                <td>-</td>
+                <td>
+<code>{
+    "message": "Data pasien berhasil dihapus"
+}</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body></html>
